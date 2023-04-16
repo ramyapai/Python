@@ -5,4 +5,4 @@ b = a-b
 a = a-b
 
 print("{a} is swapped value of a".format(a=a))
-print("{b} is swapped value of b".format(b=b))
+print("The swapped value of b is ", b)
