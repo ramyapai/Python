@@ -53,8 +53,9 @@ def calculate_check_digit(n):
     checkDigit = getCheckDigit(addResult)
     codeUPC = n + str(checkDigit)
     return codeUPC
-    print("check digit is {checkDigit} and UPC-A is {codeUPC}".format(checkDigit=checkDigit, codeUPC=codeUPC))
-    
+    #print("check digit is {checkDigit} and UPC-A is {codeUPC}".format(checkDigit=checkDigit, codeUPC=codeUPC))
+ 
+ # Function to read the input from excel file ("inputData.xlsx")
 def readInputfromExcel():
     dataInput = openpyxl.load_workbook("inputData.xlsx")
     dataInput1 = dataInput.active
@@ -66,7 +67,8 @@ def readInputfromExcel():
     c = dataInput1['B2']
     c.value =  codeUPC      
     dataInput.save("inputData.xlsx")        
-        
+ 
+ #Driver code       
 readInputfromExcel()   
 
 
