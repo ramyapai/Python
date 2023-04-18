@@ -58,7 +58,6 @@ def calculate_check_digit(n):
 def readInputfromExcel():
     dataInput = openpyxl.load_workbook("inputData.xlsx")
     dataInput1 = dataInput.active
-    codeUPC = []
     for row in range(1, dataInput1.max_row):
         for col in dataInput1.iter_cols(1, 1):
             n = col[row].value
