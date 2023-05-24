@@ -10,8 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        //Run chrome driver
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ramya\\chromedriver_win32\\chromedriver.exe");
+        //Run chrome driver (assuming chrome driver if used)
+        String path = "C:\\Users\\ramya"; //change the path based on where chromedriver is placed in your system
+        System.setProperty("webdriver.chrome.driver", path + "\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
